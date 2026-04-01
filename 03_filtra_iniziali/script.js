@@ -16,9 +16,25 @@ function filtraNomi(nomi, lettera) {
     return nomiFiltrati                      // Restituisce l'array nomi filtrati 
 }
 
+// --- Array function ---
+
+const nameFilter = (nomi, lettera) => {
+    let nomiFiltrati = [];
+    for (let i = 0; i < nomi.length; i++) {
+        let nomeCorrente = nomi[i];
+        if (nomeCorrente[0] === lettera) {
+            nomiFiltrati.push(nomeCorrente);
+        }
+    }
+    return nomiFiltrati
+}
+
 // Invoca la funzione qui e stampa il risultato in console
 
-const listaNomiFiltrati = console.log(filtraNomi(names, `A`));
+const listaNomiFiltrati = filtraNomi(names, `A`);
+const nameFilterList = nameFilter(names, `A`);
 
+console.log(nameFilterList);
+console.log(listaNomiFiltrati);
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
