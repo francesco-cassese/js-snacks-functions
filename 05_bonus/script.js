@@ -30,7 +30,7 @@ let buongiornoUtente = getStatoGiornata(18);
 if (buongiornoUtente === -1) {
     console.log(`Buongiorno ${name}`);
 } else if (buongiornoUtente === 0) {
-    console.log(`Buonpomeriggio ${name}`);
+    console.log(`Buon pomeriggio ${name}`);
 } else if (buongiornoUtente === 1) {
     console.log(`Buonasera ${name}`);
 }
