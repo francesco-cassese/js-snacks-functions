@@ -18,9 +18,7 @@ function getStatoGiornata(oraAttuale) {
     if (oraAttuale <= 17) {        // Se oraAttuale è minore delle 17 restituisci 0
         return 0
     }
-    if (oraAttuale > 17) {         // Se oraAttuale è maggiore delle 17 restituisci 1
-        return 1
-    }
+    return 1;
 }
 
 let buongiornoUtente = getStatoGiornata(18);
