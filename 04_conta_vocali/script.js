@@ -7,18 +7,18 @@ const word = 'javascript';
 
 function contatoreVocali(parola) {
     let contatore = 0
-    const vocaliTrovate = [];                                     // dichiaro variabile contatore e la setto a 0 
-    const listaVocali = ["a", "e", "i", "o", "u"];        // creo una lista contenente le vocali
+    const vocaliTrovate = [];                             // dichiaro variabile contatore e la setto a 0 
+    const listaVocali = ["a", "e", "i", "o", "u"];        // creo una lista contenente le vocali trovate
     for (let i = 0; i < parola.length; i++) {             // inizio il primo ciclo sulla parola passata
         const letteraCorrente = parola[i].toLowerCase();  // assegno la variabile ad ogni interazione e mi assicuro che la parola passata si minuscola 
         for (let j = 0; j < listaVocali.length; j++) {    // contemporaneamente inizio un secondo ciclo sulla lista delle vocali 
             if (letteraCorrente === listaVocali[j]) {     // se la lettera corrente è uguale ad una delle vocali
-                contatore++
-                vocaliTrovate.push(listaVocali[j]);                              // aumento il contatore
+                contatore++                               // aumento il contatore
+                vocaliTrovate.push(listaVocali[j]);       // ed eseguo il push delle vocali trovate nella lista
             }
         }
     }
-    return [contatore, vocaliTrovate];                                      // mi restituisce il contatore 
+    return [contatore, vocaliTrovate];                    // mi restituisce il contatore 
 }
 
 
