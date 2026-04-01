@@ -11,13 +11,16 @@ const name = 'Mario';
 // Dichiara la funzione qui.
 
 function getStatoGiornata(oraAttuale) {
-
+    if (oraAttuale < 0 || oraAttuale > 24) {
+        return null;               // Se oraAttuale è minore di 0 o maggiore di 24 restituisci null
+    }
     if (oraAttuale < 13) {         // Se oraAttuale è minore delle 13 restituisci -1 
-        return -1
+        return -1;
     }
     if (oraAttuale <= 17) {        // Se oraAttuale è minore delle 17 restituisci 0
-        return 0
+        return 0;
     }
+
     return 1;
 }
 
@@ -31,6 +34,8 @@ if (buongiornoUtente === -1) {
     console.log(`Buon pomeriggio ${name}`);
 } else if (buongiornoUtente === 1) {
     console.log(`Buonasera ${name}`);
+} else if (buongiornoUtente === null) {
+    console.log(`Orario inserito non valido.. inserire tra (0 -24)`);
 } else {
     console.log(`Ciao ${name}`);
 }
