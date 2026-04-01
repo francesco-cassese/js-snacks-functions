@@ -33,6 +33,8 @@ if (buongiornoUtente === -1) {
     console.log(`Buon pomeriggio ${name}`);
 } else if (buongiornoUtente === 1) {
     console.log(`Buonasera ${name}`);
+} else {
+    console.log(`Ciao ${name}`);
 }
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
