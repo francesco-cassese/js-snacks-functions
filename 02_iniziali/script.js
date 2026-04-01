@@ -8,7 +8,7 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 // Dichiara la funzione qui.
 
 function estraiIniziali(nomi) {
-    let iniziali = []; // Creo array vuoto
+    let iniziali = [];                      // Creo array vuoto
 
     for (let i = 0; i < nomi.length; i++) { // Inizio il ciclo
         let nomeCorrente = nomi[i];         // inizializzo variabile e faccio un assegnamento per ogni iterazione del ciclo
@@ -20,9 +20,29 @@ function estraiIniziali(nomi) {
     return iniziali;                        //mi restituisce l'array "iniziali"
 }
 
+// --- Array Function ---
+
+const extractInitials = nomi => {
+    let iniziali = [];
+
+    for (let i = 0; i < nomi.length; i++) {
+        let nomeCorrente = nomi[i];
+        if (nomeCorrente.length > 0) {
+            iniziali.push(nomeCorrente[0])
+        }
+    }
+
+    return iniziali;
+}
+
 
 // Invoca la funzione qui e stampa il risultato in console
 
-const listaIniziali = console.log(estraiIniziali(names))
+const listaIniziali = estraiIniziali(names);
+const initialsList = extractInitials(names);
+
+console.log(listaIniziali);
+console.log(initialsList);
+
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
